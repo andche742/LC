@@ -1,8 +1,8 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        aset = set()
-        for n in nums:
-            if n in aset:
+        aset = set() # use set because looking for unique numbers
+        for n in nums: 
+            if n in aset: # if we've already seen number, return true, if not, add it
                 return True
             aset.add(n)
         return False
