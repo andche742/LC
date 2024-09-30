@@ -4,7 +4,6 @@ class Solution(object):
         groups = []
         for word in strs:
             if (sorted(word) in sorts):
-                print(sorted(word + "in sorts"))
                 groups[sorts.index(sorted(word))].append(word)
             else:
 
