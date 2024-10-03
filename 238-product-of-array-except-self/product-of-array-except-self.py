@@ -7,13 +7,9 @@ class Solution(object):
             # [1, 1, 2, 6]
             # [1, 2, 3, 4]
         right = 1
-        print("hi")
         for j in range(len(nums)-1, -1, -1):
             output[j] = output[j] * right
-            print(output[j])
             right = right * nums[j]
-            print(right)
-        print("bye")
         return output
 
 
