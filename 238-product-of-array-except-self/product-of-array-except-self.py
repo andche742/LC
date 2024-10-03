@@ -1,6 +1,7 @@
 class Solution(object):
     def productExceptSelf(self, nums):
-        output = [1]*len(nums) # intialize empty array
+        output = [None]*len(nums) # intialize empty array
+        output[0] = 1
         for i in range(1, len(nums)):
             output[i] = output[i - 1] * nums[i - 1]
         right = 1
