@@ -5,16 +5,13 @@ class Solution {
             char[] ch = word.toCharArray();
             Arrays.sort(ch);
             String ordered = new String(ch);
+
             if (!(sortedLetters.containsKey(ordered))) {
                 sortedLetters.put(ordered, new ArrayList());
             }
             sortedLetters.get(ordered).add(word);
         }
-        List<List<String>> result = new ArrayList<>();
-        for (List<String> anagramSet : sortedLetters.values()) {
-            result.add(new ArrayList<>(anagramSet));  // Convert Set<String> to List<String>
-        }
         
-        return result;
+        return new ArrayList(sortedLetters.values());
     }
 }
